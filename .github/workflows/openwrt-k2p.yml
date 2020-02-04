@@ -98,9 +98,9 @@ jobs:
 
           # 编译K2P固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_ramips=y
-          CONFIG_TARGET_ramips_mt7621=y
-          CONFIG_TARGET_ramips_mt7621_DEVICE_phicomm_k2p=y
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_Generic=y
           EOF
 
           # 固件压缩:
@@ -164,10 +164,10 @@ jobs:
           # EOF
 
           # LuCI主题:
-          # cat >> .config <<EOF
-          # CONFIG_PACKAGE_luci-theme-argon=y
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_luci-theme-argon=y
           # CONFIG_PACKAGE_luci-theme-netgear=y
-          # EOF
+          EOF
 
           # 常用软件包:
           # cat >> .config <<EOF
